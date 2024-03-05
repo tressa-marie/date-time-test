@@ -1,0 +1,28 @@
+<mat-card class="zone zone-picker">
+   <mat-card-content>
+     <div class="datepicker-wrapper">
+       <mat-form-field>
+         <input matInput [ngxMatDatetimePicker]="picker" placeholder="Choose a date" [formControl]="dateControl"
+           [min]="minDate" [max]="maxDate" [disabled]="disabled">
+         <ngx-mat-datepicker-toggle matSuffix [for]="picker"></ngx-mat-datepicker-toggle>
+         <ngx-mat-datetime-picker #picker [showSpinners]="showSpinners" [showSeconds]="showSeconds"
+           [stepHour]="stepHour" [stepMinute]="stepMinute" [stepSecond]="stepSecond"
+           [enableMeridian]="enableMeridian" [disableMinute]="disableMinute" [hideTime]="hideTime">
+         </ngx-mat-datetime-picker>
+       </mat-form-field>
+     </div>
+     <h4>Selected date: {{dateControl.value?.toLocaleString()}}</h4>
+
+   </mat-card-content>
+ </mat-card>
+
+  <!-- <mat-form-field>
+    <input matInput [ngxMatDatetimePicker]="picker" placeholder="Choose a date" [formControl]="dateControl"
+       [min]="minDate" [max]="maxDate" [disabled]="disabled">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <ngx-mat-datetime-picker #picker [showSpinners]="showSpinners" [showSeconds]="showSeconds"
+       [stepHour]="stepHour" [stepMinute]="stepMinute" [stepSecond]="stepSecond"
+       [touchUi]="touchUi" [color]="color" [enableMeridian]="enableMeridian" 
+       [disableMinute]="disableMinute" [hideTime]="hideTime">
+    </ngx-mat-datetime-picker>
+  </mat-form-field> -->

@@ -1,33 +1,44 @@
-/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "noImplicitOverride": true,
-    "noPropertyAccessFromIndexSignature": true,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "declaration": false,
-    "downlevelIteration": true,
-    "experimentalDecorators": true,
+    "module": "esnext",
     "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
     "importHelpers": true,
     "target": "ES2022",
-    "module": "ES2022",
-    "useDefineForClassFields": false,
+    "typeRoots": [
+      "node_modules/@types"
+    ],
     "lib": [
-      "ES2022",
+      "es5",
+      "es2015",
       "dom"
-    ]
-  },
-  "angularCompilerOptions": {
-    "enableI18nLegacyMessageIdFormat": false,
-    "strictInjectionParameters": true,
-    "strictInputAccessModifiers": true,
-    "strictTemplates": true
+    ],
+    "types": [
+      "node"
+    ],
+    "paths": {
+      "@angular-material-components/*": [
+        "dist/@angular-material-components/*"
+      ],
+      "@angular-material-components/datetime-picker": [
+        "dist/@angular-material-components/datetime-picker"
+      ],
+      "@angular-material-components/datetime-picker/*": [
+        "dist/@angular-material-components/datetime-picker/*"
+      ],
+      "file-input": [
+        "dist/file-input"
+      ],
+      "file-input/*": [
+        "dist/file-input/*"
+      ]
+    },
+    "useDefineForClassFields": false
   }
 }
