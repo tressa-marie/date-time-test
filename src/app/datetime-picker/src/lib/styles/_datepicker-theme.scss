@@ -10,6 +10,7 @@ $calendar-weekday-table-font-size: 11px !default;
 $disabled-color: #9e9d9d;
 $secondary-text: #b8b6b6;
 $primary-text: black;
+$hover-color: #bce6ca;
 
 .mat-calendar-body-disabled > .mat-calendar-body-selected {
   $background: green;
@@ -20,6 +21,13 @@ $primary-text: black;
 .mat-date-range-input-separator {
   color: $primary-text;
   border-color: transparent;
+}
+
+@media (hover: hover) {
+  .mat-calendar-body-cell:not(.mat-calendar-body-disabled):hover {
+    background-color: $hover-color;
+    border-radius: 999px;
+  }
 }
 
 .mat-calendar-body-disabled > .mat-calendar-body-cell-content {
